@@ -29,17 +29,9 @@ public class CategoryJUnitTest {
 	    categoryDAO=(CategoryDAO)context.getBean("categoryDAO");//bean of DAOimpl
 	}
 	
-	@Ignore
+	
 	@Test
 	public void testSaveCategorySuccess()
-	{
-		category.setCategoryName("Tops");
-		category.setCategoryDesc("From zara");
-		assertEquals(true,categoryDAO.addCategory(category));
-	}
-	
-	@Test(expected=Exception.class)
-	public void testCategorySameFailure()
 	{
 		category.setCategoryName("Tops");
 		category.setCategoryDesc("From zara");

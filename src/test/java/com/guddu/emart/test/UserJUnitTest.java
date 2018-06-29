@@ -27,7 +27,6 @@ public class UserJUnitTest {
 		UserDAO=(UserDAO)context.getBean("userDAO");//bean of DAOimpl
 	}
 	
-	@Ignore
 	@Test
 	public void testSaveUserSuccess()
 	{
@@ -40,17 +39,6 @@ public class UserJUnitTest {
 		assertEquals(true,UserDAO.saveUser(user));
 	}
 	
-	@Test(expected=Exception.class)
-	public void testUserSameFailure()
-	{
-		user.setUsername("Shelly");
-		user.setAddress("Nirman Vihar");
-		user.setAge(21);
-		user.setEmailId("jellyShelly.99@gmail.com");
-		user.setPassword("HI123");
-		user.setPhone(123789450);
-		assertEquals(true,UserDAO.saveUser(user));
-	}
 	
 
 }

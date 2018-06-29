@@ -28,7 +28,7 @@ public class SupplierJUnitTest {
 	    supplierDAO=(SupplierDAO)context.getBean("supplierDAO");//bean of DAOimpl
 	}
 	
-	@Ignore
+	
 	@Test
 	public void testSaveSupplierSuccess()
 	{
@@ -37,13 +37,7 @@ public class SupplierJUnitTest {
 		assertEquals(true,supplierDAO.addSupplier(supplier));
 	}
 	
-	@Test(expected=Exception.class)
-	public void testSupplierSameFailure()
-	{
-		supplier.setSupplierName("Mahindra");
-		supplier.setSupplierAddr("Delhi");
-		assertEquals(true,supplierDAO.addSupplier(supplier));
-	}
+	
 	
 
 }
